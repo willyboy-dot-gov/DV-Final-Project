@@ -1,4 +1,4 @@
-import Globe from "https://cdn.skypack.dev/globe.gl";
+import Globe from "https://cdn.skypack.dev/globe.gl@2.25.0";
 import * as d3 from "https://cdn.skypack.dev/d3";
 import * as satellite from "https://cdn.skypack.dev/satellite.js";
 import * as THREE from "https://cdn.skypack.dev/three@0.152.2";
