@@ -6,7 +6,7 @@
 
 console.log("main.js version 2");
 
-const SATELLITE_LIMIT = 8000;
+const SATELLITE_LIMIT = 12000;
 
 const COUNTRY_ALIASES = {
   'united states of america': 'usa',
