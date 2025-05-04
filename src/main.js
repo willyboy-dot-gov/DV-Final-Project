@@ -4,7 +4,7 @@
 // - satellite from satellite.js
 // - THREE from three.js
 
-console.log("main.js version 1");
+console.log("main.js version 2");
 
 const SATELLITE_LIMIT = 8000;
 
@@ -22,12 +22,12 @@ const getCanonicalCountry = name => {
 };
 
 async function loadMetadata() {
-  const res = await fetch("./data/ucs_metadata.json");
+  const res = await fetch('./public/data/ucs_metadata.json');
   return await res.json();
 }
 
 async function loadSatellites(metadata) {
-  const tleText = await d3.text('/data/tle.txt');
+  const tleText = await d3.text('./public/data/tle.txt');
   const lines = tleText.trim().split('\n');
   const entries = [];
 
