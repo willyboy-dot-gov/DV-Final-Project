@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Satellite Globe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    #globeViz {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .totalcounter {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      pointer-events: none;
+      z-index: 10;
+      display: none;
+    }
+
+    .countrycounter {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+  #filters button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #filters button.active {
+    background: limegreen;
+    color: black;
+    font-weight: bold;
+  }
+
+    #tooltip {
+      position: absolute;
+      padding: 4px 8px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      pointer-events: none;
+      border-radius: 4px;
+      font-size: 13px;
+      display: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Counter display (top-left) -->
+  <div class="counter-box">
+    <div class="totalcounter">Total Satellites: <span id="sat-count">...</span></div>
+    <div class="countrycounter" id="sat-count-display">Satellites: —</div>
+  </div>
+
+  <!-- Main 3D globe container -->
+  <div id="globeViz"></div>
+  <div id="tooltip"></div>
+
+  <!-- Filter and slider UI (top-right) -->
+  <div id="filters" style="
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-family: sans-serif;
+    z-index: 100;
+  ">
+    <div><b>Highlight By:</b></div>
+
+    <button data-type="operator" data-value="spacex">SpaceX</button>
+    <button data-type="orbit_class" data-value="LEO" style="margin-top: 10px;">Low Earth Orbit</button>
+    <button data-type="orbit_class" data-value="MEO">Medium Earth Orbit</button>
+    <button data-type="orbit_class" data-value="GEO">Gostationary Orbit</button>
+    <button data-type="orbit_class" data-value="Elliptical">Elliptical Orbit</button>
+    <button data-type="users" data-value="Commercial" style="margin-top: 10px;">Commercial Use</button>
+    <button data-type="users" data-value="Civil">Civil Use</button>
+    <button data-type="users" data-value="Military">Military Use</button>
+    <button data-type="users" data-value="Government">Government Use</button>
+    <button id="clear-selection-btn" style="margin-top: 10px;">Clear Selection</button>
+
+    <!-- Satellite size slider -->
+    <div style="margin-top: 10px;">
+      <label for="size-slider">Satellite Size</label>
+      <input type="range" id="size-slider" min="0.3" max="2" step="0.1" value="0.3" />
+    </div>
+  </div>
+
+  <!-- Your script import -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

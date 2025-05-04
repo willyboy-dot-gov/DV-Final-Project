@@ -1,0 +1,24 @@
+{
+  "name": "my-satellite-globe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "express": "^5.1.0",
+    "globe.gl": "^2.41.4",
+    "index-array-by": "^1.4.2",
+    "node-fetch": "^3.3.2",
+    "satellite.js": "^6.0.0",
+    "three": "^0.176.0",
+    "xlsx": "^0.18.5"
+  }
+}
