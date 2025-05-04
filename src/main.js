@@ -4,6 +4,8 @@
 // - satellite from satellite.js
 // - THREE from three.js
 
+console.log("main.js version 1");
+
 const SATELLITE_LIMIT = 8000;
 
 const COUNTRY_ALIASES = {
