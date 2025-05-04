@@ -19,7 +19,7 @@ const getCanonicalCountry = name => {
 };
 
 async function loadMetadata() {
-  const res = await fetch('/data/ucs_metadata.json');
+  const res = await fetch("./data/ucs_metadata.json");
   return await res.json();
 }
 
@@ -151,7 +151,7 @@ async function main() {
   tooltip.textContent = '';
 
   const countries = await fetch(
-    'https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson'
+    "https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson"
   ).then(res => res.json());
 
   let selectedCountry = null;
