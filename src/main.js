@@ -1,7 +1,8 @@
-import Globe from "https://cdn.skypack.dev/globe.gl@2.25.0";
-import * as d3 from "https://cdn.skypack.dev/d3";
-import * as satellite from "https://cdn.skypack.dev/satellite.js";
-import * as THREE from "https://cdn.skypack.dev/three@0.152.2";
+// Assume global variables:
+// - Globe from globe.gl
+// - d3 from d3
+// - satellite from satellite.js
+// - THREE from three.js
 
 const SATELLITE_LIMIT = 8000;
 
