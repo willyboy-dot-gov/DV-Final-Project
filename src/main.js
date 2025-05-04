@@ -1,7 +1,7 @@
 import Globe from "https://cdn.skypack.dev/globe.gl";
 import * as d3 from "https://cdn.skypack.dev/d3";
 import * as satellite from "https://cdn.skypack.dev/satellite.js";
-import * as THREE from "https://cdn.skypack.dev/three";
+import * as THREE from "https://cdn.skypack.dev/three@0.152.2";
 
 const SATELLITE_LIMIT = 8000;
 
