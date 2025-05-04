@@ -4,7 +4,7 @@
 // - satellite from satellite.js
 // - THREE from three.js
 
-console.log("main.js version 2");
+console.log("main.js version 3");
 
 const SATELLITE_LIMIT = 12000;
 
