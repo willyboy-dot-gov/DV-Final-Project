@@ -1,7 +1,7 @@
-import Globe from "https://cdn.jsdelivr.net/npm/globe.gl@2.32.8/dist/globe.gl.esm.min.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-import * as satellite from "https://cdn.jsdelivr.net/npm/satellite.js@5.0.2/+esm";
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.152.2/+esm";
+import Globe from "https://esm.sh/globe.gl@2.32.8";
+import * as d3 from "https://esm.sh/d3@7";
+import * as satellite from "https://esm.sh/satellite.js@5.0.2";
+import * as THREE from "https://esm.sh/three@0.152.2";
 
 const SATELLITE_LIMIT = 8000;
 
